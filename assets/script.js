@@ -1,38 +1,51 @@
 const dati = [
     {
-        id : 'barnett',
         nome : 'Wayne Barnett',
         ruolo : 'Founder & CEO',
-        foto : 'wayne-barnett-founder-ceo.jpg'
+        foto : './assets/img/wayne-barnett-founder-ceo.jpg'
     },
     {
-        id : 'carrol',
         nome : 'Angela Carrol',
         ruolo : 'Chief Editor',
-        foto : 'angela-caroll-chief-editor.jpg',
+        foto : './assets/img/angela-caroll-chief-editor.jpg',
     },
     {
-        id : 'gordon',
         nome : 'Walter Gordon',
         ruolo : 'Office Manager',
-        foto : 'walter-gordon-office-manager.jpg',
+        foto : './assets/img/walter-gordon-office-manager.jpg',
     },
     {
-        id : 'lopez',
         nome : 'Angela Lopez',
         ruolo : 'Social Media Manager',
-        foto : 'angela-lopez-social-media-manager.jpg',
+        foto : './assets/img/angela-lopez-social-media-manager.jpg',
     },
     {
-        id : 'estrada',
         nome : 'Scott Estrada',
         ruolo : 'Developer',
-        foto : 'scott-estrada-developer.jpg',
+        foto : './assets/img/scott-estrada-developer.jpg',
     },
     {
-        id : 'ramos',
         nome : 'Barbara Ramos',
         ruolo : 'Graphic Designer',
-        foto : 'barbara-ramos-graphic-designer.jpg',
+        foto : './assets/img/barbara-ramos-graphic-designer.jpg',
     }
 ]
+
+for ( let i = 0; i < dati.length; i++){
+    let info = dati[i]
+
+    document.body.innerHTML += `
+        <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src='${info.foto}'  alt="">
+                    <div class="card-body">
+                    <h5 class="card-title">
+                        ${info.nome}
+                    </h5>
+                    <p class="card-text">
+                        ${info.ruolo}
+                    </p>
+                    </div>
+                </div>
+    `
+}
+
